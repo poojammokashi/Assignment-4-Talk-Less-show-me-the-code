@@ -1,0 +1,16 @@
+Is JSX mandiatory for React?
+=>JSX is not a requirement for using React. Using React without JSX is especially convenient when you don’t want to set up compilation in your build 
+environment.
+Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). So, anything you can do with JSX can also be done
+with just plain JavaScript.
+
+Is ES6 mandatory for JS?
+No, we define a React component as a plain JavaScript class
+
+How can I write comments in JSX?
+// Single line comment
+/*-------*/  Multie line comment
+
+What is <React.fragment></React.fragment> and <></>?
+React Fragments allow you to wrap or group multiple elements without adding an extra node to the DOM. 
+This can be useful when rendering multiple child elements/components in a single parent component.
