@@ -14,3 +14,44 @@ How can I write comments in JSX?
 What is <React.fragment></React.fragment> and <></>?
 React Fragments allow you to wrap or group multiple elements without adding an extra node to the DOM. 
 This can be useful when rendering multiple child elements/components in a single parent component.
+
+What is Virtual DOM?
+Virtual Dom is nothing but representation of the dom, everytime with every change the virtual dom gets updated instead of the real DOM.
+Like Real DOM Virtual DOM is also represented as tree structure each element is a node in the tee. when a new item is added the application UI, a node is
+added to the tress as well. If the state of these elements changes, a new virtual DOM tree is created.
+
+ What is Reconciliation in react?
+Reconciliation means that react uses diff algorithms to find out difference between trees (real DOM and virtual DOM)
+   and just update the changed portion of UI from virtual DOM to real DOM.
+
+What is React Fibre?
+ React Fiber is the new reconciliation engine in React 16. Its main goal is to enable incremental(faster) rendering
+   of the virtual DOM. 
+
+ Why do we need Key in react? When do we need key in react?
+ Key is used to uniquely identify our react elements so that the reconciliation can easily find the new added element
+   and only re-render that elements intead of re-rendering all the similar elements.
+   We need Key in react when we have multiple elements of same html tag.
+
+ Can we use index as key in react?
+ No we should not use index as a key in react, if the order of items may change. This can negatively impact 
+   performance and may cause issues with component state.
+   If ther is no unique code available then in that case we can use index as a key in react.
+
+ What is props in react?
+  In react every components at the end is javascript function so the parameters passed into functional components
+    are called props. 
+    Ex. function Header(props){
+        return (
+            <h1>Hello {props.name}</h1>
+        );
+    };
+
+ What is config driven UI?
+  The UI which are created based on confiq file are called confiq driven UI. If the confiq file are changed then 
+    similarly our UI should also be changed.
+    
+    {TitleComponent} : Used to Call React element
+     <TitleComponent/>: This value in jsx is meant for rendering a component (i.e) function that return jsx. This is self closing tag. 
+    <TitleComponent></TitleComponent>: This is same as { <TitleComponent /> } if there are no child inside TitleComponent. If there are children, 
+    then those values come inside { <TitleComponent>}  and </TitleComponent> }
